@@ -1,0 +1,23 @@
+name: 'MST monday.com pulse updater'
+description: 'This action adds update to a pulse on monday.com'
+author: 'Zeljko Romanovic MST'
+inputs:
+  monday-api-key:
+    description: monday.com API Key (Admin > API > API v2 Token > Personal API Token [Copy]). This parameter should be stored in the GitHub secrets.
+    required: true
+  monday-pulse-id:
+    description: monday.com pulse ID in which an update will be added. This parameter should be stored in the GitHub secrets.
+    required: true
+  monday-update-text:
+    description: Text which will be added as an update.
+    default: ''
+    required: true
+outputs:
+  monday-update-id:
+    description: ID of the update created with this action.
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'file-text'
+  color: 'green'
