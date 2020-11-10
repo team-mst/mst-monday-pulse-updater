@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@types/node": "^13.11.0",
-    "@actions/core": "^1.2.3",
+    "@actions/core": "^1.2.6",
     "unirest": "^0.6.0"
   }
 }
